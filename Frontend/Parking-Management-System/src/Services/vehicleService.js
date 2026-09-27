@@ -11,7 +11,12 @@ export const vehicleService = {
     return data
   },
 
-  entry: async ({ plate, owner, vehicleType, spaceId }) => {
+  entry: async ({ 
+    plate,
+    owner,
+    vehicleType,
+    spaceId 
+  }) => {
     const { data } = await api.post('/vehicles/entry', {
       plate,
       owner,

@@ -13,7 +13,7 @@ const VehicleEntry = () => {
     parkingService.getAvailable().then(setAvailable)
   }, [])
 
-  const handleSubmit = async (e) => {
+ /* const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
     setMessage('')
@@ -29,7 +29,29 @@ const VehicleEntry = () => {
     } finally {
       setLoading(false)
     }
+  }*/
+ const handleSubmit = async (e) => {
+  e.preventDefault()
+  setError('')
+  setMessage('')
+  setLoading(true)
+
+  try {
+    const vehicle = await vehicleService.entry(form)
+
+    setMessage(`Vehicle ${vehicle.plate} parked in ${form.spaceId}`)
+    setForm({ plate: '', owner: '', vehicleType: 'car', spaceId: '' })
+
+    // Refresh available spaces
+    const availableSpaces = await parkingService.getAvailable()
+    setAvailable(availableSpaces)
+
+  } catch (err) {
+    setError(err.response?.data?.message || err.message)
+  } finally {
+    setLoading(false)
   }
+} 
 
   return (
     <div className="p-6 max-w-xl">
@@ -74,4 +96,6 @@ const VehicleEntry = () => {
   )
 }
 
-export default VehicleEntry
+export default VehicleEntry 
+
+

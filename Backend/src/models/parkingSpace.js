@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
 const parkingSpaceSchema = new mongoose.Schema(
+  
   {
     id: { type: String, required: true, unique: true }, // e.g. A1, B12
     zone: { type: String, required: true },
@@ -9,6 +10,7 @@ const parkingSpaceSchema = new mongoose.Schema(
       enum: ['available', 'occupied', 'reserved'],
       default: 'available'
     },
+    
     vehicle: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Vehicle',

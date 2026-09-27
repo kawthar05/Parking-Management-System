@@ -10,22 +10,22 @@ const RATES = {
   truck: 200
 }
 
-// @desc    Get all vehicles
-// @route   GET /api/vehicles
+//    Get all vehicles
+//   GET /api/vehicles
 export const getAllVehicles = asyncHandler(async (req, res) => {
   const vehicles = await Vehicle.find().sort({ entryTime: -1 })
   res.json(vehicles)
 })
 
-// @desc    Get active (still parked) vehicles
-// @route   GET /api/vehicles/active
+//    Get active (still parked) vehicles
+//    GET /api/vehicles/active
 export const getActiveVehicles = asyncHandler(async (req, res) => {
   const vehicles = await Vehicle.find({ exitTime: null }).sort({ entryTime: -1 })
   res.json(vehicles)
 })
 
-// @desc    Vehicle entry
-// @route   POST /api/vehicles/entry
+//    Vehicle entry
+//    POST /api/vehicles/entry
 export const vehicleEntry = asyncHandler(async (req, res) => {
   const { plate, owner, vehicleType, spaceId } = req.body
 
@@ -59,8 +59,8 @@ export const vehicleEntry = asyncHandler(async (req, res) => {
   res.status(201).json(vehicle)
 })
 
-// @desc    Vehicle exit
-// @route   PUT /api/vehicles/:id/exit
+//     Vehicle exit
+//    PUT /api/vehicles/:id/exit
 export const vehicleExit = asyncHandler(async (req, res) => {
   const vehicle = await Vehicle.findById(req.params.id)
 
@@ -93,8 +93,8 @@ export const vehicleExit = asyncHandler(async (req, res) => {
   res.json(vehicle)
 })
 
-// @desc    Mark vehicle as paid
-// @route   PUT /api/vehicles/:id/pay
+//     Mark vehicle as parked paid
+//    PUT /api/vehicles/:id/pay
 export const markAsPaid = asyncHandler(async (req, res) => {
   const vehicle = await Vehicle.findById(req.params.id)
 

@@ -2,15 +2,15 @@ import asyncHandler from 'express-async-handler'
 import Payment from '../models/Payment.js'
 import Vehicle from '../models/Vehicle.js'
 
-// @desc    Get all payments
-// @route   GET /api/payments
+//    Get all payments
+//   GET /api/payments
 export const getAllPayments = asyncHandler(async (req, res) => {
   const payments = await Payment.find().sort({ date: -1 })
   res.json(payments)
 })
 
-// @desc    Create payment
-// @route   POST /api/payments
+//    Create payment
+//   POST /api/payments
 export const createPayment = asyncHandler(async (req, res) => {
   const { vehicleId, plate, amount, method } = req.body
 
@@ -27,8 +27,8 @@ export const createPayment = asyncHandler(async (req, res) => {
   res.status(201).json(payment)
 })
 
-// @desc    Get payment stats
-// @route   GET /api/payments/stats
+//     Get payment stats
+//    GET /api/payments/stats
 export const getPaymentStats = asyncHandler(async (req, res) => {
   const payments = await Payment.find()
 

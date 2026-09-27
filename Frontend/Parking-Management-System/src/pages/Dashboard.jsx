@@ -14,7 +14,9 @@ const Dashboard = () => {
         vehicleService.getActive(),
         paymentService.getStats()
       ])
-      setStats({ spaces: spaceStats, vehicles: vehicles.length, payments: paymentStats })
+      setStats({ spaces: spaceStats,
+         vehicles: vehicles.length, 
+         payments: paymentStats })
     }
     load()
   }, [])

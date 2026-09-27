@@ -2,8 +2,8 @@ import asyncHandler from 'express-async-handler'
 import User from '../models/User.js'
 import generateToken from '../utils/generateToken.js'
 
-// @desc    Register user
-// @route   POST /api/auth/register
+//     Register user
+//   POST /api/auth/register
 export const register = asyncHandler(async (req, res) => {
   const { name, email, password, role } = req.body
     
@@ -42,8 +42,8 @@ export const register = asyncHandler(async (req, res) => {
 })
 
 
-// @desc    Login user
-// @route   POST /api/auth/login
+//     Login user
+//    POST /api/auth/login
 export const login = asyncHandler(async (req, res) => {
   const { email, password } = req.body
 

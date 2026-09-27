@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   }, [])
 
   const login = (userData) => {
-    // userData now contains: _id, name, email, role, token
+    // userData contains: _id, name, email, role, token
     localStorage.setItem('parkUser', JSON.stringify(userData))
     setUser(userData)
   }

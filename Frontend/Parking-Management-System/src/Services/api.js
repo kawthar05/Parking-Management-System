@@ -16,7 +16,7 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-// Optional: handle 401 globally
+// handle 401 globally
 api.interceptors.response.use(
   (response) => response,
   (error) => {

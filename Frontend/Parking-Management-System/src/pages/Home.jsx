@@ -3,10 +3,10 @@ import { Car, Shield, Clock, CreditCard } from 'lucide-react'
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-indigo-800 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-800 text-white">
       <div className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">ParkSmart</h1>
+          <h1 className="text-5xl font-bold mb-4 ">ParkSmart</h1>
           <p className="text-xl text-blue-100 mb-8">
             Smart Parking Management System
           </p>
