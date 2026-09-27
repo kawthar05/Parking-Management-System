@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { paymentService } from '../services/paymentService'
-import PaymentTable from '../components/PaymentTable'
+import PaymentTable from '../Components/PaymentTable'
 
 const Payments = () => {
   const [payments, setPayments] = useState([])

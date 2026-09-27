@@ -23,7 +23,7 @@ export default handlePay*/
 import { useEffect, useState } from 'react'
 import { vehicleService } from '../services/vehicleService'
 import { paymentService } from '../services/paymentService'
-import VehicleTable from '../components/VehicleTable'
+import VehicleTable from '../Components/VehicleTable'
 
 const VehicleExit = () => {
   const [vehicles, setVehicles] = useState([])

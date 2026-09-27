@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { parkingService } from '../services/parkingService'
-import ParkingCard from '../components/ParkingCard'
+import ParkingCard from '../Components/ParkingCard'
 
 const ParkingSpaces = () => {
   const [spaces, setSpaces] = useState([])
