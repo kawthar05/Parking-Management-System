@@ -63,8 +63,8 @@ export const login = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Get current user
-// @route   GET /api/auth/me
+//   Get current user
+//    GET /api/auth/me
 export const getMe = asyncHandler(async (req, res) => {
   res.json(req.user)
 })
