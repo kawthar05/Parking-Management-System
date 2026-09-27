@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://parking-management-system-zkxm.onrender.com',
+  baseURL: 'https://parking-management-system-zkxm.onrender.com/api',
   headers: {
     'Content-Type': 'application/json'
   }
