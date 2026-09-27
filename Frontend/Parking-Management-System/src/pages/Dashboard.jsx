@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { parkingService } from '../services/parkingService'
-import { vehicleService } from '../services/vehicleService'
-import { paymentService } from '../services/paymentService'
+import { parkingService } from '../Services/parkingService'
+import { vehicleService } from '../Services/vehicleService'
+import { paymentService } from '../Services/paymentService'
 import { Car, ParkingSquare, DollarSign, Users } from 'lucide-react'
 
 const Dashboard = () => {

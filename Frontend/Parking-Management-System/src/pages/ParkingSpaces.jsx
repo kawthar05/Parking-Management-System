@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { parkingService } from '../services/parkingService'
+import { parkingService } from '../Services/parkingService'
 import ParkingCard from '../Components/ParkingCard'
 
 const ParkingSpaces = () => {

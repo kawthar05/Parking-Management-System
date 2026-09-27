@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { paymentService } from '../services/paymentService'
+import { paymentService } from '../Services/paymentService'
 import PaymentTable from '../Components/PaymentTable'
 
 const Payments = () => {

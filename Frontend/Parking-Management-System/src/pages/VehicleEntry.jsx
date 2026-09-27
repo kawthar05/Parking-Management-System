@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { vehicleService } from '../services/vehicleService'
-import { parkingService } from '../services/parkingService'
+import { vehicleService } from '../Services/vehicleService'
+import { parkingService } from '../Services/parkingService'
 
 const VehicleEntry = () => {
   const [form, setForm] = useState({ plate: '', owner: '', vehicleType: 'car', spaceId: '' })

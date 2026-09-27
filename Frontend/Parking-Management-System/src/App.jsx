@@ -4,7 +4,7 @@ import { useAuth } from './context/AuthContext'
 import Navbar from "./Components/Navbar";
 
 import Sidebar from './Components/Sidebar'
-import ProtectedRoute from './routes/ProtectedRoute'
+import ProtectedRoute from './Routes/ProtectedRoute'
 
 import Home from './pages/Home'
 import Login from './pages/Login'

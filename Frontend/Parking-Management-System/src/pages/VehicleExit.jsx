@@ -1,28 +1,8 @@
-/*import { paymentService } from '../services/paymentService'
 
-
-const handlePay = async (vehicle) => {
-  try {
-    await paymentService.create({
-      vehicleId: vehicle._id,   //important to use vehicle._id instead of vehicle.id
-      plate: vehicle.plate,
-      amount: vehicle.amount,
-      method: 'cash'
-    })
-    // No need to call markPaid since the paymentService.create should handle that
-    setMessage(`Payment of ₦${vehicle.amount} collected for ${vehicle.plate}`)
-    setSelected(null)
-    load()
-  } catch (err) {
-    alert(err.response?.data?.message || err.message)
-  }
-}
-
-export default handlePay*/
 
 import { useEffect, useState } from 'react'
-import { vehicleService } from '../services/vehicleService'
-import { paymentService } from '../services/paymentService'
+import { vehicleService } from '../Services/vehicleService'
+import { paymentService } from '../Services/paymentService'
 import VehicleTable from '../Components/VehicleTable'
 
 const VehicleExit = () => {

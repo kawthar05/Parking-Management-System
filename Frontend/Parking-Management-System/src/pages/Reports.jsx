@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { vehicleService } from '../services/vehicleService'
-import { paymentService } from '../services/paymentService'
-import { parkingService } from '../services/parkingService'
+import { vehicleService } from '../Services/vehicleService'
+import { paymentService } from '../Services/paymentService'
+import { parkingService } from '../Services/parkingService'
 import { format } from 'date-fns'
 
 const Reports = () => {
